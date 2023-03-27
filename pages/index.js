@@ -28,7 +28,7 @@ export default function Home() {
   const handleSubmit = (e) => {
     e.preventDefault();
     // Send email using EmailJS
-    emailjs.send('gmail', template_y88s2kc, { name, email, message }, service_znoxmtb)
+    emailjs.send('service_znoxmtb', 'template_y88s2kc', { name, email, message }, '2iioxDHH4IXSFu_Ts')
       .then((response) => {
         alert('Email sent successfully!');
         console.log('Email sent successfully!', response.status, response.text);
@@ -201,7 +201,7 @@ export default function Home() {
             Here are few projects I have completed for the past couple of years
             </p>
           </div>
-          <div className="grid grid-rows-5 gap-10 py-10 lg:flex-row lg:flex-wrap">
+          <div className="grid grid-rows-5 gap-10 py-10 lg:flex-row">
             <div className="lg:flex gap-10">
               <div className="shadow-lg p-10 rounded-xl my-10 dark:bg-white flex-1">
                 <h3 className="text-lg font-medium pt-4 pb-8 text-teal-600 text-center ">Digibinn smart dustbin project</h3>
@@ -284,7 +284,7 @@ export default function Home() {
         <section className="py-10">
         <div>
             <h3 
-              id="projects"
+              id="contactme"
               className="text-3xl py-1 dark:text-white ">Contact me</h3>
             <p className="text-md py-2 leading-8 text-gray-800 dark:text-gray-200">
             Feel free to contact me anytime
