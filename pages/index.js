@@ -127,7 +127,7 @@ export default function Home() {
             I have always been driven to achieve my goals. I believe that consistency is key to success, 
             and I take pride in my ability to code, remain focused, and be committed to my work.
             <br /> <br />
-            Please do not hesitate to contact me if you require web-related support. I'm eager to pursue jobs where I can 
+            Please do not hesitate to contact me if you require web-related support. I&apos;m eager to pursue jobs where I can 
             contribute, learn, and grow. 
             </p>
           </div>
