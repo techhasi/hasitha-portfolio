@@ -12,10 +12,10 @@ import programming from "../public/programming.jpg";
 import interests from "../public/interests.jpg";
 import Image from "next/image";
 import web1 from "../public/web1.png";
-import web2 from "../public/web2.png";
+import web2 from "../public/web2.jpg";
 import web3 from "../public/web3.png";
-import web4 from "../public/web4.png";
-import web5 from "../public/web5.png";
+import web4 from "../public/web4.jpg";
+import web5 from "../public/web5.jpg";
 import web6 from "../public/web6.png";
 import emailjs from 'emailjs-com';
 
@@ -202,71 +202,81 @@ export default function Home() {
             </p>
           </div>
           <div className="grid grid-rows-5 gap-10 py-10 lg:flex-row lg:flex-wrap">
-            <div className="shadow-lg p-10 rounded-xl my-10 dark:bg-white flex-1 ">
-              <Image
-                className="rounded-lg object-cover"
-                width={"50%"}
-                height={"25%"}
-                layout="responsive"
-                src={web1}
-              />
-              <p className="text-black mt-5">This is a project developed by our team Codedump. I developed this responsive webapp using
-                 react, tailwind and firebase</p>
+            <div className="lg:flex gap-10">
+              <div className="shadow-lg p-10 rounded-xl my-10 dark:bg-white flex-1">
+                <h3 className="text-lg font-medium pt-4 pb-8 text-teal-600 text-center ">Digibinn smart dustbin project</h3>
+                <Image
+                  className="rounded-lg object-cover scale-100 hover:scale-110 ease-in duration-500"
+                  width={"50%"}
+                  height={"25%"}
+                  layout="responsive"
+                  src={web1}
+                />
+                <p className="text-black mt-5 text-justify">This is a project developed by our team Codedump. I developed this responsive webapp using
+                  react, tailwind and firebase</p>
+              </div>
+              <div className="shadow-lg p-10 rounded-xl my-10 dark:bg-white flex-1">
+              <h3 className="text-lg font-medium pt-4 pb-8 text-teal-600 text-center ">Skin consultation center</h3>
+                <Image
+                  className="rounded-lg object-cover scale-100 hover:scale-110 ease-in duration-500"
+                  width={"100%"}
+                  height={"50%"}
+                  layout="responsive"
+                  src={web2}
+                />
+                <p className="text-black mt-5 text-justify">This is a software developed for a consultation center to manage patients, consultations
+                and doctors. Java was used to develop this system</p>
+              </div>
             </div>
-            <div className="shadow-lg p-10 rounded-xl my-10 dark:bg-white flex-1">
-              <Image
-                className="rounded-lg object-cover"
-                width={"100%"}
-                height={"50%"}
-                layout="responsive"
-                src={web2}
-              />
-              <p className="text-white mt-5">This is a software developed for a consultation center to manage patients, consultations
-               and doctors. Java was used to develop this system</p>
+            <div className="lg:flex gap-10">
+              <div className="shadow-lg p-10 rounded-xl my-10 dark:bg-white flex-1">
+                <h3 className="text-lg font-medium pt-4 pb-8 text-teal-600 text-center ">Accelerate</h3>
+                <Image
+                  className="rounded-lg object-cover scale-100 hover:scale-110 ease-in duration-500"
+                  width={"50%"}
+                  height={"25%"}
+                  layout="responsive"
+                  src={web3}
+                />
+                <p className="text-black mt-5 text-justify">A webpage developed by our team on car racing. This was developed by 
+                HTML, CSS and Javascript</p>
+              </div>
+              <div className="shadow-lg p-10 rounded-xl my-10 dark:bg-white flex-1">
+              <h3 className="text-lg font-medium pt-4 pb-8 text-teal-600 text-center ">Student grading system</h3>
+                <Image
+                  className="rounded-lg object-cover scale-100 hover:scale-110 ease-in duration-500"
+                  width={"100%"}
+                  height={"50%"}
+                  layout="responsive"
+                  src={web4}
+                />
+                <p className="text-black mt-5 text-justify">This is a software developed for student grading. Python was used to develop this system</p>
+              </div>
             </div>
-            <div className="shadow-lg p-10 rounded-xl my-10 dark:bg-white flex-1">
-              <Image
-                className="rounded-lg object-cover"
-                width={"50%"}
-                height={"25%"}
-                layout="responsive"
-                src={web3}
-              />
-              <p className="text-white mt-5">This is a project developed by our team Codedump. I developed this responsive webapp using
-                 react, tailwind and firebase</p>
-            </div>
-            <div className="shadow-lg p-10 rounded-xl my-10 dark:bg-white flex-1">
-              <Image
-                className="rounded-lg object-cover"
-                width={"100%"}
-                height={"50%"}
-                layout="responsive"
-                src={web4}
-              />
-              <p className="text-white mt-5">This is a project developed by our team Codedump. I developed this responsive webapp using
-                 react, tailwind and firebase</p>
-            </div>
-            <div className="shadow-lg p-10 rounded-xl my-10 dark:bg-white flex-1">
-              <Image
-                className="rounded-lg object-cover"
-                width={"100%"}
-                height={"50%"}
-                layout="responsive"
-                src={web5}
-              />
-              <p className="text-white mt-5">This is a project developed by our team Codedump. I developed this responsive webapp using
-                 react, tailwind and firebase</p>
-            </div>
-            <div className="shadow-lg p-10 rounded-xl my-10 dark:bg-white flex-1">
-              <Image
-                className="rounded-lg object-cover"
-                width={"100%"}
-                height={"50%"}
-                layout="responsive"
-                src={web6}
-              />
-              <p className="text-white mt-5">This is a project developed by our team Codedump. I developed this responsive webapp using
-                 react, tailwind and firebase</p>
+            <div className="lg:flex gap-10">
+              <div className="shadow-lg p-10 rounded-xl my-10 dark:bg-white flex-1">
+                <h3 className="text-lg font-medium pt-4 pb-8 text-teal-600 text-center ">Cruise management system</h3>
+                <Image
+                  className="rounded-lg object-cover scale-100 hover:scale-110 ease-in duration-500"
+                  width={"50%"}
+                  height={"25%"}
+                  layout="responsive"
+                  src={web5}
+                />
+                <p className="text-black mt-5 text-justify">A cruise management was developed using Java concepts</p>
+              </div>
+              <div className="shadow-lg p-10 rounded-xl my-10 dark:bg-white flex-1">
+              <h3 className="text-lg font-medium pt-4 pb-8 text-teal-600 text-center ">Pong by HINNT</h3>
+                <Image
+                  className="rounded-lg object-cover scale-100 hover:scale-110 ease-in duration-500"
+                  width={"100%"}
+                  height={"50%"}
+                  layout="responsive"
+                  src={web6}
+                />
+                <p className="text-black mt-5 text-justify">This is a game developed by our team in University of Kelaniya. We used
+                C++ and Raylib library for this</p>
+              </div>
             </div>
           </div>
         </section>
