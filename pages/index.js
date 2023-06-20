@@ -19,6 +19,7 @@ import web4 from "../public/web4.jpg";
 import web5 from "../public/web5.jpg";
 import web6 from "../public/web6.png";
 import emailjs from 'emailjs-com';
+import {motion} from 'framer-motion';
 
 export default function Home() {
   const [darkMode, setDarkMode] = useState(false);
@@ -166,7 +167,7 @@ export default function Home() {
                 <AiFillGithub />
               </a>
             </div>
-            <div className="mx-auto bg-gradient-to-b from-teal-500 rounded-full w-60 h-60 relative overflow-hidden mt-20 md:h-96 md:w-96 shadow-lg">
+            <div className="mx-auto bg-gradient-to-b from-teal-500 rounded-full w-60 h-60 relative overflow-hidden mt-20 md:h-96 md:w-96 shadow-lg ">
               <Image src={hasitha} layout="fill" objectFit="cover" />
             </div>
           </div>
@@ -175,7 +176,7 @@ export default function Home() {
           <div>
             <h3 
               id="aboutme"
-              className="text-3xl py-1 dark:text-white mt-8 ">About me</h3>
+              className="text-3xl font-bold py-1 dark:text-white mt-8 ">ABOUT ME</h3>
             <p className="text-md text-justify py-2 leading-8 text-gray-800 dark:text-gray-200">
             My name is Hasitha Wimalasooriya, an undergraduate student of Software Engineering at IIT, 
             passionate about Front-end and Back-end development. As a highly motivated and dedicated undergraduate, 
@@ -188,16 +189,17 @@ export default function Home() {
           </div>
         </section>
 
-        <section className="py-10">
+        
+<section className="py-10">
           <div>
             <h3
               id="skills" 
-              className="text-3xl py-1 dark:text-white mt-10 ">Skills</h3> 
+              className="text-3xl font-bold py-1 dark:text-white mt-10 ">SKILLS</h3> 
           </div>         
           <div className=" grid grid-rows-1">
-            <div className="text-center shadow-lg p-10 rounded-xl my-10  dark:bg-white flex-1 h-auto">
-              <Image src={programming} width={150} height={100}/>
-              <h3 className="text-lg font-medium pt-8 pb-8 text-teal-600 ">
+            <div className="text-center shadow-lg p-10 rounded-xl my-10  dark:bg-white bg-neutral-200 flex-1 h-auto">
+              <Image src={programming} width={170} height={120}/>
+              <h3 className="text-lg font-bold pt-8 pb-8 text-teal-600 ">
                 Professional skills
               </h3>
               <div className="grid grid-cols-3">
@@ -205,7 +207,7 @@ export default function Home() {
                   <li className="text-gray-800 py-1">Python</li>
                   <li className="text-gray-800 py-1">Java</li>
                   <li className="text-gray-800 py-1">C++</li>
-                  <li className="text-gray-800 py-1">Python</li>
+                  <li className="text-gray-800 py-1">R</li>
                 </ul>
                 <ul>
                   <li className="text-gray-800 py-1">HTML</li>
@@ -214,17 +216,17 @@ export default function Home() {
                   <li className="text-gray-800 py-1">React</li>
                 </ul>
                 <ul>
-                  <li className="text-gray-800 py-1">MySQL</li>
+                  <li className="text-gray-800 py-1">SQL</li>
                   <li className="text-gray-800 py-1">PHP</li>
                   <li className="text-gray-800 py-1">MongoDB</li>
                   <li className="text-gray-800 py-1">Firebase</li>
                 </ul>
               </div>
             </div>
-          <div className="lg:flex gap-10">
-            <div className="text-center shadow-lg p-10 rounded-xl my-10 dark:bg-white flex-1">
+          <div className="flex gap-10">
+            <div className="text-center shadow-lg p-10 rounded-xl dark:bg-white bg-neutral-200 flex-1">
               <Image src={softskills} width={190} height={130} />
-              <h3 className="text-lg font-medium pt-4 pb-8 text-teal-600 ">
+              <h3 className="text-lg font-bold pt-4 pb-8 text-teal-600 ">
                 Soft Skills
               </h3>
               <ul>
@@ -234,9 +236,9 @@ export default function Home() {
                   <li className="text-gray-800 py-1">Team player</li>
               </ul>
             </div>
-            <div className="text-center shadow-lg p-10 rounded-xl my-10 dark:bg-white flex-1">
+            <div className="text-center shadow-lg p-10 rounded-xl dark:bg-white bg-neutral-200 flex-1">
               <Image src={interests} width={200} height={150} />
-              <h3 className="text-lg font-medium  pb-8 text-teal-600 ">Interests</h3>
+              <h3 className="text-lg font-bold  pb-8 text-teal-600 ">Interests</h3>
               <ul>
                   <li className="text-gray-800 py-1">Programming</li>
                   <li className="text-gray-800 py-1">Back-end development</li>
@@ -251,15 +253,15 @@ export default function Home() {
           <div>
             <h3 
               id="projects"
-              className="text-3xl py-1 dark:text-white ">Projects</h3>
+              className="text-3xl font-bold py-1 dark:text-white ">PROJECTS</h3>
             <p className="text-md py-2 leading-8 text-gray-800 dark:text-gray-200">
             Here are few projects I have completed for the past couple of years
             </p>
           </div>
-          <div className="grid grid-rows-3 gap-10 lg:flex-row">
-            <div className="lg:flex gap-10">
-              <div className="shadow-lg p-10 rounded-xl my-10 dark:bg-white flex-1">
-                <h3 className="text-lg font-medium pt-4 pb-8 text-teal-600 text-center ">Digibinn smart dustbin project</h3>
+          <div className="grid grid-rows-3 lg:flex-row gap-10">
+            <div className="flex gap-10">
+              <div className="shadow-lg p-10 rounded-xl dark:bg-white bg-neutral-200 flex-1">
+                <h3 className="text-lg font-bold pt-4 pb-8 text-teal-600 text-center ">Digibinn smart dustbin project</h3>
                 <Image
                   className="rounded-lg object-cover scale-100 hover:scale-110 ease-in duration-500 "
                   width={"50%"}
@@ -270,8 +272,8 @@ export default function Home() {
                 <p className="text-black mt-5 text-justify">This is a project developed by our team Codedump. I developed this responsive webapp using
                   react, tailwind and firebase</p>
               </div>
-              <div className="shadow-lg p-10 rounded-xl my-10 dark:bg-white flex-1">
-              <h3 className="text-lg font-medium pt-4 pb-8 text-teal-600 text-center ">Skin consultation center</h3>
+              <div className="shadow-lg p-10 rounded-xl dark:bg-white bg-neutral-200 flex-1">
+              <h3 className="text-lg font-bold pt-4 pb-8 text-teal-600 text-center ">Skin consultation center</h3>
                 <Image
                   className="rounded-lg object-cover scale-100 hover:scale-110 ease-in duration-500"
                   width={"100%"}
@@ -283,9 +285,9 @@ export default function Home() {
                 and doctors. Java was used to develop this system</p>
               </div>
             </div>
-            <div className="lg:flex gap-10">
-              <div className="shadow-lg p-10 rounded-xl my-10 dark:bg-white flex-1">
-                <h3 className="text-lg font-medium pt-4 pb-8 text-teal-600 text-center ">Accelerate</h3>
+            <div className="flex gap-10">
+              <div className="shadow-lg p-10 rounded-xl dark:bg-white bg-neutral-200 flex-1">
+                <h3 className="text-lg font-bold pt-4 pb-8 text-teal-600 text-center ">Accelerate</h3>
                 <Image
                   className="rounded-lg object-cover scale-100 hover:scale-110 ease-in duration-500"
                   width={"50%"}
@@ -296,8 +298,8 @@ export default function Home() {
                 <p className="text-black mt-5 text-justify">A webpage developed by our team on car racing. This was developed by 
                 HTML, CSS and Javascript</p>
               </div>
-              <div className="shadow-lg p-10 rounded-xl my-10 dark:bg-white flex-1">
-              <h3 className="text-lg font-medium pt-4 pb-8 text-teal-600 text-center ">Student grading system</h3>
+              <div className="shadow-lg p-10 rounded-xl dark:bg-white bg-neutral-200 flex-1">
+              <h3 className="text-lg font-bold pt-4 pb-8 text-teal-600 text-center ">Student grading system</h3>
                 <Image
                   className="rounded-lg object-cover scale-100 hover:scale-110 ease-in duration-500"
                   width={"100%"}
@@ -308,9 +310,9 @@ export default function Home() {
                 <p className="text-black mt-5 text-justify">This is a software developed for student grading. Python was used to develop this system</p>
               </div>
             </div>
-            <div className="lg:flex gap-10">
-              <div className="shadow-lg p-10 rounded-xl my-10 dark:bg-white flex-1">
-                <h3 className="text-lg font-medium pt-4 pb-8 text-teal-600 text-center ">Cruise management system</h3>
+            <div className="flex gap-10">
+              <div className="shadow-lg p-10 rounded-xl dark:bg-white bg-neutral-200 flex-1">
+                <h3 className="text-lg font-bold pt-4 pb-8 text-teal-600 text-center ">Cruise management system</h3>
                 <Image
                   className="rounded-lg object-cover scale-100 hover:scale-110 ease-in duration-500"
                   width={"50%"}
@@ -320,8 +322,8 @@ export default function Home() {
                 />
                 <p className="text-black mt-5 text-justify">A cruise management system was developed using Java concepts</p>
               </div>
-              <div className="shadow-lg p-10 rounded-xl my-10 dark:bg-white flex-1">
-              <h3 className="text-lg font-medium pt-4 pb-8 text-teal-600 text-center ">Pong by HINNT</h3>
+              <div className="shadow-lg p-10 rounded-xl dark:bg-white bg-neutral-200 flex-1">
+              <h3 className="text-lg font-bold pt-4 pb-8 text-teal-600 text-center ">Pong by HINNT</h3>
                 <Image
                   className="rounded-lg object-cover scale-100 hover:scale-110 ease-in duration-500"
                   width={"100%"}
@@ -340,12 +342,12 @@ export default function Home() {
         <div>
             <h3 
               id="contactme"
-              className="text-3xl py-1 dark:text-white ">Contact me</h3>
+              className="text-3xl font-bold py-1 dark:text-white ">CONTACT ME</h3>
             <p className="text-md py-2 leading-8 text-gray-800 dark:text-gray-200">
             Feel free to contact me anytime
             </p>
           </div>
-        <div className="shadow-lg p-10 rounded-xl my-10  dark:bg-white flex-1 h-auto">
+        <div className="shadow-lg p-10 rounded-xl my-10  dark:bg-white bg-neutral-200 flex-1 h-auto">
           <form onSubmit={handleSubmit}>
           <div className="mb-4">
             <label className="block text-gray-700 font-bold mb-2" htmlFor="name">
