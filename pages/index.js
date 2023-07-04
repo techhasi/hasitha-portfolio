@@ -20,6 +20,7 @@ import web5 from "../public/web5.jpg";
 import web6 from "../public/web6.png";
 import emailjs from 'emailjs-com';
 import {motion} from 'framer-motion';
+import { TypeAnimation } from 'react-type-animation';
 
 export default function Home() {
   const [darkMode, setDarkMode] = useState(false);
@@ -76,7 +77,12 @@ export default function Home() {
       </Head>
       <main className=" bg-white dark:bg-gray-900 px-10 lg:px-40">
         <section className="min-h-screen">
-        <nav className="relative flex flex-wrap items-center justify-end px-2 py-6 mb-3">
+        <motion.nav
+          initial={{ x: 5000 }}
+          animate={{ x: 0 }}
+          transition={{ duration: 0.5 }} 
+          className="relative flex flex-wrap items-center justify-end px-2 py-6 mb-3"
+        >
         <div className="container px-4 mx-auto flex flex-wrap items-center justify-end">
           <div className="w-full relative flex justify-end lg:w-auto lg:static lg:block lg:justify-end">
             <button
@@ -136,15 +142,35 @@ export default function Home() {
             </ul>
           </div>
         </div>
-      </nav>
+      </motion.nav>
               {/**/}
             
-          <div className="text-center p-10 py-10">
+          <motion.div 
+            className="text-center p-10 py-10"
+            initial={{ scale: 0 }}
+            animate={{ scale: 1 }}
+            transition={{ duration: 0.5 }}
+          >
             <h2 className="text-5xl py-2 dark:text-white font-medium md:text-6xl">
               Hi, I am
             </h2>
             <h3 className="text-2xl py-2 text-teal-600 md:text-3xl font-semibold">
-              Hasitha Wimalasooriya
+            <TypeAnimation
+              sequence={[
+                'Hasitha Wimalasooriya',
+                1000,
+                'a Developer',
+                1000,
+                'a Tech Enthusiast',
+                1000,
+                'Learner',
+                1000
+              ]}
+              wrapper="span"
+              speed={50}
+              style={{ fontSize: '2em', display: 'inline-block' }}
+              repeat={Infinity}
+            />
             </h3>
             <p className="text-md py-5 leading-8 text-gray-800 dark:text-gray-200 max-w-xl mx-auto md:text-xl">
               Software Engineering undergraduate providing services for programming and design content
@@ -167,10 +193,10 @@ export default function Home() {
                 <AiFillGithub />
               </a>
             </div>
-            <div className="mx-auto bg-gradient-to-b from-teal-500 rounded-full w-60 h-60 relative overflow-hidden mt-20 md:h-96 md:w-96 shadow-lg ">
+            <div className="mx-auto bg-gradient-to-b from-teal-500 rounded-full w-60 h-60 relative overflow-hidden mt-20 md:h-96 md:w-96 shadow-lg">
               <Image src={hasitha} layout="fill" objectFit="cover" />
             </div>
-          </div>
+          </motion.div>
         </section>
         <section>
           <div>
@@ -258,12 +284,12 @@ export default function Home() {
             Here are few projects I have completed for the past couple of years
             </p>
           </div>
-          <div className="grid grid-rows-3 lg:flex-row gap-10">
+          <div className="grid grid-rows-3 lg:flex-row gap-10 py-10">
             <div className="flex gap-10">
-              <div className="shadow-lg p-10 rounded-xl dark:bg-white bg-neutral-200 flex-1">
+              <div className="shadow-lg p-10 rounded-xl dark:bg-white bg-neutral-200 flex-1 hover:scale-110 ease-in duration-500">
                 <h3 className="text-lg font-bold pt-4 pb-8 text-teal-600 text-center ">Digibinn smart dustbin project</h3>
                 <Image
-                  className="rounded-lg object-cover scale-100 hover:scale-110 ease-in duration-500 "
+                  className="rounded-lg object-cover scale-100"
                   width={"50%"}
                   height={"25%"}
                   layout="responsive"
@@ -272,10 +298,10 @@ export default function Home() {
                 <p className="text-black mt-5 text-justify">This is a project developed by our team Codedump. I developed this responsive webapp using
                   react, tailwind and firebase</p>
               </div>
-              <div className="shadow-lg p-10 rounded-xl dark:bg-white bg-neutral-200 flex-1">
+              <div className="shadow-lg p-10 rounded-xl dark:bg-white bg-neutral-200 flex-1 hover:scale-110 ease-in duration-500">
               <h3 className="text-lg font-bold pt-4 pb-8 text-teal-600 text-center ">Skin consultation center</h3>
                 <Image
-                  className="rounded-lg object-cover scale-100 hover:scale-110 ease-in duration-500"
+                  className="rounded-lg object-cover scale-100"
                   width={"100%"}
                   height={"50%"}
                   layout="responsive"
@@ -286,10 +312,10 @@ export default function Home() {
               </div>
             </div>
             <div className="flex gap-10">
-              <div className="shadow-lg p-10 rounded-xl dark:bg-white bg-neutral-200 flex-1">
+              <div className="shadow-lg p-10 rounded-xl dark:bg-white bg-neutral-200 flex-1 hover:scale-110 ease-in duration-500">
                 <h3 className="text-lg font-bold pt-4 pb-8 text-teal-600 text-center ">Accelerate</h3>
                 <Image
-                  className="rounded-lg object-cover scale-100 hover:scale-110 ease-in duration-500"
+                  className="rounded-lg object-cover scale-100"
                   width={"50%"}
                   height={"25%"}
                   layout="responsive"
@@ -298,10 +324,10 @@ export default function Home() {
                 <p className="text-black mt-5 text-justify">A webpage developed by our team on car racing. This was developed by 
                 HTML, CSS and Javascript</p>
               </div>
-              <div className="shadow-lg p-10 rounded-xl dark:bg-white bg-neutral-200 flex-1">
+              <div className="shadow-lg p-10 rounded-xl dark:bg-white bg-neutral-200 flex-1 hover:scale-110 ease-in duration-500">
               <h3 className="text-lg font-bold pt-4 pb-8 text-teal-600 text-center ">Student grading system</h3>
                 <Image
-                  className="rounded-lg object-cover scale-100 hover:scale-110 ease-in duration-500"
+                  className="rounded-lg object-cover scale-100"
                   width={"100%"}
                   height={"50%"}
                   layout="responsive"
@@ -311,10 +337,10 @@ export default function Home() {
               </div>
             </div>
             <div className="flex gap-10">
-              <div className="shadow-lg p-10 rounded-xl dark:bg-white bg-neutral-200 flex-1">
+              <div className="shadow-lg p-10 rounded-xl dark:bg-white bg-neutral-200 flex-1 hover:scale-110 ease-in duration-500">
                 <h3 className="text-lg font-bold pt-4 pb-8 text-teal-600 text-center ">Cruise management system</h3>
                 <Image
-                  className="rounded-lg object-cover scale-100 hover:scale-110 ease-in duration-500"
+                  className="rounded-lg object-cover scale-100"
                   width={"50%"}
                   height={"25%"}
                   layout="responsive"
@@ -322,10 +348,10 @@ export default function Home() {
                 />
                 <p className="text-black mt-5 text-justify">A cruise management system was developed using Java concepts</p>
               </div>
-              <div className="shadow-lg p-10 rounded-xl dark:bg-white bg-neutral-200 flex-1">
+              <div className="shadow-lg p-10 rounded-xl dark:bg-white bg-neutral-200 flex-1 hover:scale-110 ease-in duration-500">
               <h3 className="text-lg font-bold pt-4 pb-8 text-teal-600 text-center ">Pong by HINNT</h3>
                 <Image
-                  className="rounded-lg object-cover scale-100 hover:scale-110 ease-in duration-500"
+                  className="rounded-lg object-cover scale-100"
                   width={"100%"}
                   height={"50%"}
                   layout="responsive"
@@ -347,7 +373,7 @@ export default function Home() {
             Feel free to contact me anytime
             </p>
           </div>
-        <div className="shadow-lg p-10 rounded-xl my-10  dark:bg-white bg-neutral-200 flex-1 h-auto">
+        <div className="shadow-lg p-10 rounded-xl  dark:bg-white bg-neutral-200 flex-1 h-auto">
           <form onSubmit={handleSubmit}>
           <div className="mb-4">
             <label className="block text-gray-700 font-bold mb-2" htmlFor="name">
